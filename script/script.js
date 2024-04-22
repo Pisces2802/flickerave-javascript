@@ -501,12 +501,12 @@ let database2 = {};
 
 const arr = ["lagos", "Abuja", "Ondo", "Jos", ["Katsina", "Kano"]];
 
-console.log("length:", arr.length);
+// console.log("length:", arr.length);
 // console.log(arr[0]);
 // console.log(arr[1]);
 // console.log(arr[2]);
 // console.log(arr[3]);
-console.log(arr[4][0]);
+// console.log(arr[4][0]);
 
 // formular to get the last element in an array
 
@@ -523,7 +523,7 @@ const myArray = [
 ];
 
 myArray[0] = "Lil pump";
-console.log(myArray);
+// console.log(myArray);
 
 // let lastElement = myArray[myArray.length - 1];
 // console.log(lastElement);
@@ -541,5 +541,239 @@ const obj = {
   traffic: true,
 };
 
-console.log(arr);
-console.log(obj);
+// console.log(arr);
+// console.log(obj);
+
+// const evenNums = [];
+
+// console.log(evenNums);
+
+// evenNums[0] = 2;
+
+// console.log(evenNums);
+
+// evenNums[1] = 8;
+// console.log(evenNums);
+
+const myFavoriteMovies = [];
+
+//push method (addding elements to the end of the array)
+
+myFavoriteMovies.push("Amadeus");
+// console.log(myFavoriteMovies);
+
+myFavoriteMovies.push("Pulp Fiction");
+// console.log(myFavoriteMovies);
+
+myFavoriteMovies.push("Shawshank Redemption");
+// console.log(myFavoriteMovies);
+
+myFavoriteMovies.push("Fight Club");
+// console.log(myFavoriteMovies);
+
+//unShift method (adding elements to the begining of the array)
+
+// myFavoriteMovies.unshift("No  coutry for old men");
+// console.log(myFavoriteMovies);
+
+// myFavoriteMovies.unshift("Taxi Driver");
+// console.log(myFavoriteMovies);
+
+// myFavoriteMovies.unshift("Heat");
+// console.log(myFavoriteMovies);
+
+//pop (removing elements of an array from the end)
+
+// console.log(myFavoriteMovies);
+
+//pop (remove elements from the end of an array)
+
+myFavoriteMovies.pop();
+// console.log(myFavoriteMovies);
+
+// myFavoriteMovies.pop();
+// console.log(myFavoriteMovies);
+
+// myFavoriteMovies.pop();
+// console.log(myFavoriteMovies);
+
+// concat (joint arrays together)
+
+mySecondFavShows = ["Breaking Bad", "The Wire"];
+// console.log(mySecondFavShows);
+
+let movieList = myFavoriteMovies.concat(mySecondFavShows);
+// console.log(movieList);
+
+// splice is a destructive array method that doesn't return a value
+
+// movieList.splice(3, 2);
+// console.log('using splice:' ,movieList);
+
+// slice returns a value without destroying the original array
+
+// let returnedSlicedElements = movieList.slice(1, 4);
+// console.log("using slice:", returnedSlicedElements);
+// console.log(movieList);
+
+// const actorDatabase = [
+//   {
+//     fName: "Albert",
+//     lName: "Deniro",
+//     isMarried: true,
+//     age: 70,
+//     oscars: 5,
+//   },
+
+//   {
+//     fName: "Cillian",
+//     lName: "Murphy",
+//     isMarried: true,
+//     age: 45,
+//     oscars: 3,
+//   },
+
+//   {
+//     fName: "Margort",
+//     lName: "Robbie",
+//     isMarried: true,
+//     age: 35,
+//     oscars: 2,
+//   },
+
+//   {
+//     fName: "Denzel",
+//     lName: "Washington",
+//     isMarried: true,
+//     age: 60,
+//     oscars: 6,
+//     movies: {
+//       title: "Training day",
+//     },
+//   },
+// ];
+
+// console.log(actorDatabase);
+
+// // use the slice method to get access to the last elements, movie title property
+
+// let lastElement = actorDatabase.slice(3);
+// console.log(lastElement);
+
+// let titleFromObject = lastElement[[0]].movies.title;
+// console.log(titleFromObject);
+
+// const car = {};
+
+// car.doors = 2;
+// car.trunk = 1;
+// car.brand = "jaguar";
+// car.sayName = function () {
+//   console.log(`i am a ${car.brand}, and i have ${car.doors} doors`);
+// };
+// car.isAuto = false;
+
+// // console.log(car);
+// // console.log(car.sayName());
+// // console.log(car);
+
+// // accessing object properties with bracket notation
+
+// let carBrand = car["brand"];
+// console.log(carBrand);
+
+// car["tyres"] = 4;
+
+// console.log(car);
+
+// const arrOfNum = [1, 2, 3, 4, 4, 6, [2, 4, 6], 9];
+// console.log(arrOfNum);
+
+// const firstElem = arrOfNum[1];
+// console.log(firstElem);
+
+// const latElem = arrOfNum[arrOfNum.length - 1];
+// console.log(latElem);
+
+// let four = arrOfNum[6][1];
+// console.log(four);
+
+const movies = [
+  {
+    movieName: "Equalizer",
+    hours: 120,
+    actors: ["Denzel Washington", "Blake Lively", "Aan de Armas"],
+    rating: 5,
+  },
+
+  {
+    movieName: "Oppenheimer",
+    hours: 180,
+    actors: ["Robert Downey", "Cillian Murphy", ""],
+    rating: 4,
+  },
+
+  {
+    movieName: "Pulp Fiction",
+    hours: 140,
+    actors: ["Bruce Wilis", "Samuel jackson", "John Travolta"],
+    rating: 5,
+  },
+];
+
+// for (let movie of movies) {
+//   console.log("individual movie object:", movie);
+// }
+
+// console.log(movies);
+// let answer = movies[movies.length - 1];
+// let finalAnswer = answer.actors[answer.actors.length - 1];
+// console.log(finalAnswer);
+
+// let saveJohn = movies[2].actors[2];
+// console.log(saveJohn);
+
+// if statement
+
+// let userCountry = prompt("Enter your country");
+// let transformedUserCountry = userCountry.toLowerCase();
+// console.log(transformedUserCountry);
+
+// let validateCountry = (country) => {
+//   if (country === "nigeria") {
+//     return `country is ${country}`;
+//   } else if (country === "kenya") {
+//     return `country is ${country}`;
+//   } else if (country === "angola") {
+//     return `country is ${country}`;
+//   } else {
+//     return `invalid country`;
+//   }
+// };
+
+// let counrtryResult = validateCountry(transformedUserCountry);
+// console.log("country:", counrtryResult);
+
+// age grade for ticketing
+
+// comparison equators
+
+// >
+// <
+// >=
+// <=
+// ++
+// --
+// ==
+// ===
+// !==
+// ||
+// &&
+
+const num = 5;
+
+const stringNum = "5";
+
+console.log(typeof num);
+console.log(typeof stringNum);
+console.log(num === stringNum);
