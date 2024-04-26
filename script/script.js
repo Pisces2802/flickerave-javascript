@@ -698,29 +698,6 @@ let movieList = myFavoriteMovies.concat(mySecondFavShows);
 // let four = arrOfNum[6][1];
 // console.log(four);
 
-const movies = [
-  {
-    movieName: "Equalizer",
-    hours: 120,
-    actors: ["Denzel Washington", "Blake Lively", "Aan de Armas"],
-    rating: 5,
-  },
-
-  {
-    movieName: "Oppenheimer",
-    hours: 180,
-    actors: ["Robert Downey", "Cillian Murphy", ""],
-    rating: 4,
-  },
-
-  {
-    movieName: "Pulp Fiction",
-    hours: 140,
-    actors: ["Bruce Wilis", "Samuel jackson", "John Travolta"],
-    rating: 5,
-  },
-];
-
 // for (let movie of movies) {
 //   console.log("individual movie object:", movie);
 // }
@@ -767,13 +744,147 @@ const movies = [
 // ==
 // ===
 // !==
-// ||
-// &&
+// ||    //logical or
+// &&    //LOGICAL and
 
-const num = 5;
+// const num = 5;
 
-const stringNum = "5";
+// const stringNum = "5";
 
-console.log(typeof num);
-console.log(typeof stringNum);
-console.log(num === stringNum);
+// console.log(typeof num);
+// console.log(typeof stringNum);
+// console.log(num === stringNum);
+
+// 1 - 5 free
+// 6 - 17 #2,000
+// 18 - 65 #4,000
+// 65 > 'too old to enter the park'
+
+// let userAge = prompt("enter your age");
+
+function verifyAge(age) {
+  if (age > 0 && age <= 5) {
+    return `enter for free`;
+  } else if (age > 5 && age <= 17) {
+    return `you're to pay #2,000`;
+  } else if (age > 17 && age <= 65) {
+    return `you're to pay #4,000`;
+  } else {
+    return `to old to enter the park`;
+  }
+}
+
+// let ageResult = verifyAge(userAge);
+// console.log(ageResult);
+
+// loops on iterables
+//iterables are any data type that has a length property
+
+let myArr = [2, 4, 5, "good man", () => console.log("hello"), false, true]; //7 elements in the array
+
+// console.log("first".length);
+// console.log(myArray.length);
+
+// for (let i = 0; i < myArr.length; i++) {
+//   console.log("traditional for loop:", myArr[i]);
+// }
+
+// for (let elem of myArr) {
+//   console.log("for of loop:", elem);
+// }
+
+// function checkEvenNum(arr) {
+//   let evenNumArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//       evenNumArr.push(arr[i]);
+//     }
+//   }
+//   return evenNumArr;
+// }
+
+// let even = checkEvenNum(elem);
+// console.log("for loop:", even);
+
+//create a function
+//pass the right param
+//create empty array
+//run the loop using the for of loop
+//check condition
+//push elem to array that meets condition
+//return the array
+
+// let elem = [2, 5, 7, 8, 8, 14];
+
+// function loopArray(arr) {
+//   let even = [];
+//   for (let el of arr) {
+//     if (el % 2 === 0) {
+//       even.push(el);
+//     }
+//   }
+//   return even;
+// }
+
+// let myResult = loopArray(elem);
+// console.log(myResult);
+
+// let usernames = [
+//   "liam",
+//   "Zayn",
+//   "Denzel",
+//   "Mathew",
+//   "Reginald",
+//   "Scott",
+//   "Winston",
+// ];
+
+// function checkName(arr) {
+//   const result = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].length >= 5) {
+//       result.push(arr[i]);
+//     }
+//   }
+//   return result;
+// }
+
+// let namesGreaterThan5 = checkName(usernames);
+// console.log(namesGreaterThan5);
+// console.log(Array.isArray(namesGreaterThan5));
+
+const movies = [
+  {
+    movieName: "Equalizer",
+    hours: 120,
+    actors: ["Denzel Washington", "Blake Lively", "Aan de Armas"],
+    rating: 5,
+  },
+
+  {
+    movieName: "Oppenheimer",
+    hours: 180,
+    actors: ["Robert Downey", "Cillian Murphy"],
+    rating: 4,
+  },
+
+  {
+    movieName: "Pulp Fiction",
+    hours: 140,
+    actors: ["Bruce Wilis", "Samuel jackson", "John Travolta"],
+    rating: 5,
+  },
+];
+
+function nestedLopp(arrOfObj) {
+  for (let i = 0; i < arrOfObj.length; i++) {
+    let obj = arrOfObj[i].actors;
+    for (let j = 0; j < obj.length; j++) {
+      console.log(obj[j])
+    }
+  }
+}
+
+//create a nested loop using for of
+
+nestedLopp(movies);
