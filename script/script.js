@@ -887,4 +887,4 @@ function nestedLopp(arrOfObj) {
 
 //create a nested loop using for of
 
-nestedLopp(movies);
+// nestedLopp(movies);
