@@ -12,19 +12,34 @@
             <form action="" class="form">
                 <p class="username">
                     <label for="username">username</label>
-                    <input type="text" id="username">
+                    <input type="text" id="username" name="username">
                 </p>
 
                 <p class="password">
                     <label for="password">password</label>
-                    <input type="password" id="password">
+                    <input type="password" name="password" id="password">
                 </p>
 
                 <button type="submit" class="btn" id="btn">Send 👍</button>
            
             </form>
+
+
+                <!-- <button onclick="onClick()">Click me 😁</button> -->
         </section>
 
+        <!-- <p class="text" onmouseover="onMouseOver()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, perspiciatis?</p> -->
+
+<script>
+    const onClick = () => {
+      
+        console.log(`i got clicked`)
+    }
+
+    function onMouseOver() {
+        console.log('i just moved my moue into the element')
+    }
+</script>
 
 <script src="./script/script.js"></script>
 <script src="./script/callbackFunctions.js"></script>
