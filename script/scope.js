@@ -47,23 +47,50 @@ function createScope() {
 
 // cities.forEach(callBack);
 
-function first() {
-  let name = "David"; //closure
-  return function second() {
-    // let name = "John";
-    return function third() {
-      return name;
-    };
-  };
+// function first() {
+//   let name = "David"; //closure
+//   return function second() {
+//     // let name = "John";
+//     return function third() {
+//       return name;
+//     };
+//   };
+// }
+
+// let second = first();
+// let third = second();
+// let David = third();
+// // console.log(David);
+
+// function sayName(name) {
+//   console.log(name);
+// }
+
+// sayName(David);
+
+// promise example
+
+console.log("begining of program");
+
+function takeAWhile() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const result = `i got logged after 3 seconds`;
+      resolve(result);
+    }, 3000);
+  });
 }
 
-let second = first();
-let third = second();
-let David = third();
-// console.log(David);
+console.log("end of program");
 
-function sayName(name) {
-  console.log(name);
+async function callMessage() {
+  const message = await takeAWhile();
+  return message;
 }
 
-sayName(David);
+const callDelayedMessage = async () => {
+  let message = await callMessage();
+  console.log(message);
+};
+
+callDelayedMessage();
