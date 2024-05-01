@@ -61,10 +61,14 @@ const password = document.getElementById("password");
 const button = document.getElementById("btn");
 // console.log("button element:", button);
 
-function consoleClick(dodo) {
-  dodo.preventDefault();
+function consoleClick(event) {
+  event.preventDefault();
 
-  if (username.value === "" && password.value === "") {
+  if (
+    (username.value === "" && password.value === "") ||
+    (username.value !== "" && password.value === "") ||
+    (username.value === "" && password.value !== "")
+  ) {
     console.error("Enter both fields ❌");
   } else {
     console.log({
@@ -76,6 +80,5 @@ function consoleClick(dodo) {
 
 button.addEventListener("click", consoleClick);
 
-
-//return the object from the function above and  extract 
+//return the object from the function above and  extract
 //both properties into their individual variables
