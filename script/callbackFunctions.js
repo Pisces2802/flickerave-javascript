@@ -62,7 +62,7 @@ const button = document.getElementById("btn");
 // console.log("button element:", button);
 
 function acceptAndReturnObject(obj) {
-  console.log(obj);
+  console.log("🧒", obj);
 }
 
 function consoleClick(event) {
