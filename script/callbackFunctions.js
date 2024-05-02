@@ -61,6 +61,10 @@ const password = document.getElementById("password");
 const button = document.getElementById("btn");
 // console.log("button element:", button);
 
+function acceptAndReturnObject(obj) {
+  console.log(obj);
+}
+
 function consoleClick(event) {
   event.preventDefault();
 
@@ -71,14 +75,12 @@ function consoleClick(event) {
   ) {
     console.error("Enter both fields ❌");
   } else {
-    console.log({
+    const credentials = {
       username: username.value,
       password: password.value,
-    });
+    };
+    acceptAndReturnObject(credentials);
   }
 }
 
 button.addEventListener("click", consoleClick);
-
-//return the object from the function above and  extract
-//both properties into their individual variables

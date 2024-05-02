@@ -70,27 +70,27 @@ function createScope() {
 
 // promise example
 
-console.log("begining of program");
+// console.log("begining of program");
 
-function takeAWhile() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const result = `i got logged after 3 seconds`;
-      resolve(result);
-    }, 3000);
-  });
-}
+// function takeAWhile() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const result = `i got logged after 3 seconds`;
+//       resolve(result);
+//     }, 3000);
+//   });
+// }
 
-console.log("end of program");
+// console.log("end of program");
 
-async function callMessage() {
-  const message = await takeAWhile();
-  return message;
-}
+// async function callMessage() {
+//   const message = await takeAWhile();
+//   return message;
+// }
 
-const callDelayedMessage = async () => {
-  let message = await callMessage();
-  console.log(message);
-};
+// const callDelayedMessage = async () => {
+//   let message = await callMessage();
+//   console.log(message);
+// };
 
-callDelayedMessage();
+// callDelayedMessage();
