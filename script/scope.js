@@ -3,33 +3,34 @@
 
 // Global
 
-// const sum = 10;
+function addNumbers() {
+  //sum variable is local to this function
+  let sum = 20;
+  console.log(sum);
+  // function sayAnything() {
+  //   sum = 30;
+  //   console.log(sum);
+  // }
+  // sayAnything();
+}
 
-// function addNumbers() {
-//   //sum variable is local to this function
-//   //   const sum = 20;
-//   return function sayAnything() {
-//     console.log(sum);
-//   };
-// }
-
-// let result = addNumbers()();
+// addNumbers();
 // console.log(sum);
 
 // Local or function
 // Block
 
-let cities = ["Budapest", "London", "Monaco", "Marakesh", "Manhattan"];
+// let cities = ["Budapest", "London", "Monaco", "Marakesh", "Manhattan"];
 
-function createScope() {
-  let i = "oh im outside 😁"; //you can access me
+// function createScope() {
+//   let i = "oh im outside the for loop block 😁"; //you can access me
 
-  for (let i = 0; i < cities.length; i++) {
-    //you cant access me outside the  block
-    console.log(`arr elements at index ${i}: ${cities[i]}`);
-  }
-  console.log(i);
-}
+//   for (let i = 0; i < cities.length; i++) {
+//     //you cant access me outside the  block
+//     console.log(`arr elements at index ${i}: ${cities[i]}`);
+//   }
+//   console.log(i);
+// }
 
 // createScope();
 
@@ -48,19 +49,49 @@ function createScope() {
 // cities.forEach(callBack);
 
 // function first() {
-//   let name = "David"; //closure
-//   return function second() {
+//   //execution context is created on every function invocation.
+//    //closure
+//   function second() {
 //     // let name = "John";
-//     return function third() {
+//     function third() {
 //       return name;
-//     };
-//   };
+//     }
+//     return third();
+//   }
+//   return second();
 // }
 
-// let second = first();
-// let third = second();
-// let David = third();
-// // console.log(David);
+// const result = first();
+// console.log(result);
+// console.log(David);
+
+let club = "Manchester United";
+
+// function printClub() {
+
+//   for (let i = 0; i < club.length; i++) {
+//     console.log(club[i]);
+//   }
+//   console.log(i);
+// }
+
+// printClub();
+
+// function first() {
+//   function second() {
+//     let myName = "inside second function 😁";
+//     console.log(myName);
+
+//     function third() {
+//       console.log(myName);
+//     }
+
+//     third();
+//   }
+//   second();
+// }
+
+// first();
 
 // function sayName(name) {
 //   console.log(name);
@@ -144,20 +175,17 @@ function createScope() {
 
 // lexical scope
 
-// function robbery() {
-//     const heroes = ["Superman", "Batman", "Black Panther", "Spiderman"];
+function robbery() {
+  function cryForHelp() {
+    const heroes = ["Superman", "Batman", "Black Panther", "Spiderman"];
+    function inner() {
+      for (let hero of heroes) {
+        console.log(`please help us ${hero.toUpperCase()}!!!`);
+      }
+    }
+    inner();
+  }
+  cryForHelp();
+}
 
-//    function cryForHelp() {
-
-//     function inner() {
-
-//       for (let hero of heroes) {
-//         console.log(`please help us ${hero.toUpperCase()}!!!`);
-//       }
-//     }
-//     inner();
-//   }
-//   cryForHelp();
-// }
-
-// robbery();    //creates a leaxical environment or a execution context
+robbery(); //creates a leaxical environment or a execution context

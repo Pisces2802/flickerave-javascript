@@ -29,7 +29,7 @@
 
 //get elements
 const htmlButton = document.getElementsByClassName("btn");
-console.log(htmlButton);
+// console.log(htmlButton);
 
 //write a function that loops through the htmlcollection and change the styles of both elements differently within
 // 5 min

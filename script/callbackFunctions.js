@@ -5,25 +5,32 @@
 // they can be passed as an argument
 // they can be stored in a variable
 
-// function add(a, b) {
-//   return a + b;
-// }
+function add(a, b) {
+  return a + b;
+}
 
-// function minus(a, b) {
-//   return a - b;
-// }
+function minus(a, b) {
+  return a - b;
+}
 
-// function multiply(a, b) {
-//   return a * b;
-// }
+function multiply(a, b) {
+  return a * b;
+}
 
-// function calculate(fn, param1, param2) {
-//   return fn(param1, param2);
-// }
+function calculate(fn, param1, param2) {
+  return fn(param1, param2);
+}
 
-// let resultCalcAdd = calculate(add, 10, 10);
-// let resultCalMinus = calculate(minus, 80, 60);
-// console.log(resultCalMinus);
+// console.log("add:", add);
+// console.log("minus:", minus);
+// console.log("multiply:", multiply);
+// console.log("calculate:", calculate);
+
+// let resultCalcAdd = calculate(add, 50, 60);
+// let result2 = calculate(add, 200, 300);
+// // let resultCalMinus = calculate(minus, 80, 60);
+// console.log(resultCalcAdd);
+// console.log(result2);
 
 // const greetingFromUser = prompt("enter your greeting");
 // const nameFromUser = prompt("enter your name");
@@ -52,35 +59,35 @@
 
 // button.addEventListener("click", consoleClick);
 
-const username = document.getElementById("username");
-const password = document.getElementById("password");
+// const username = document.getElementById("username");
+// const password = document.getElementById("password");
 
 // console.dir(username);
 // console.dir(password);
 
-const button = document.getElementById("btn");
+// const button = document.getElementById("btn");
 // console.log("button element:", button);
 
-function acceptAndReturnObject(obj) {
-  console.log("🧒", obj);
-}
+// function acceptAndReturnObject(obj) {
+//   console.log("🧒", obj);
+// }
 
-function consoleClick(event) {
-  event.preventDefault();
+// function consoleClick(event) {
+//   event.preventDefault();
 
-  if (
-    (username.value === "" && password.value === "") ||
-    (username.value !== "" && password.value === "") ||
-    (username.value === "" && password.value !== "")
-  ) {
-    console.error("Enter both fields ❌");
-  } else {
-    const credentials = {
-      username: username.value,
-      password: password.value,
-    };
-    acceptAndReturnObject(credentials);
-  }
-}
+//   if (
+//     (username.value === "" && password.value === "") ||
+//     (username.value !== "" && password.value === "") ||
+//     (username.value === "" && password.value !== "")
+//   ) {
+//     console.error("Enter both fields ❌");
+//   } else {
+//     const credentials = {
+//       username: username.value,
+//       password: password.value,
+//     };
+//     acceptAndReturnObject(credentials);
+//   }
+// }
 
-button.addEventListener("click", consoleClick);
+// button.addEventListener("click", consoleClick);
